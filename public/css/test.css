@@ -1,0 +1,27 @@
+body {
+    background-color: #22223b ;
+    color: #f2e9e4;
+}
+h1{
+    margin-left: 30px;
+}
+li{
+    display: inline-block;
+    margin: auto 100px 30px 100px;
+}
+.title{
+    font-size: 75px;
+    color: #c9ada7;
+}
+.edit-outline{
+    display: flex;
+    max-width: 500px;
+    margin: auto;
+}
+.info{
+    font-size: 50px;
+}
+.show{
+text-align: center;
+margin: 25px;
+}

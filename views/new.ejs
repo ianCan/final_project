@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/test.css">
+    <title>Movies</title>
+</head>
+
+<body>
+    <div class="edit-outline">
+        <h1>What Movie Would You Like to add?</h1>
+        <form action="/movies" method="POST">
+            Name: <input type="text" name="name" />
+            <br>
+            Genre: <select name="genre" id="genre-select">
+                <option value="">--Please choose an option--</option>
+                <option value="Action">Action</option>
+                <option value="Animaton">Animaton</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Horror">Horror</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Romance">Romance</option>
+                <option value="Thriller">Thriller</option>
+                <option value="Western">Western</option>
+            </select>
+            <br>
+            Streaming Service: <select type="text" name="streaming" id="stream-select">
+                <option value="">--Please choose an option--</option>
+                <option value="Netflix">Netflix</option>
+                <option value="Amazon Prime">Amazon Prime</option>
+                <option value="Hulu">Hulu</option>
+                <option value="Disney+">Disney+</option>
+                <option value="HBO Max">HBO Max</option>
+                <option value="Crunchyroll">Crunchyroll</option>
+            </select>
+            <br>
+            Personal Score: <input type="range" id="score" name="score" min="0" max="10">
+            <br>
+            Watched: <input type="checkbox" name="hasSeen" />
+            <br>
+            <input type="submit" value="Create Movie">
+        </form>
+
+</body>
+
+</html>

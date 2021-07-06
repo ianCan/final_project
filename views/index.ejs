@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/test.css">
+    <title>Your Queue</title>
+</head>
+
+<body>
+    <h1>Your Queue</h1>
+
+    <ul class="movie">
+        <% for(let i=0; i < movies.length; i++){ %>
+            <li>
+                <a class="title" href="/movies/<%=movies[i].id; %>">
+                    <%=movies[i].name; %>
+                </a>
+            </li>
+            <li>
+                Catergory : <br>
+                <span class="info">
+                    <%=movies[i].genre; %>
+                </span>
+            </li>
+            <li>
+                Streaming Service : <br>
+                <span class="info">
+                    <%=movies[i].streaming; %>
+                </span>
+            </li>
+            <li>
+                <% if(movies[i].hasSeen===true){ %>
+                    You have seen this movie.
+                    <% } else { %>
+                        Needs to be watched.
+                        <% } %>
+            </li>
+            <li>
+                User Score : <br> <span class="info">
+                    <%=movies[i].score; %>
+                </span>/10
+            </li>
+            <li>
+                <form action="/movies/<%=movies[i].id; %>?_method=DELETE" method="POST">
+                    <input type="submit" class="btn btn-outline-danger" value="DELETE">
+                </form>
+            </li>
+            <br>
+            <!--Update Form-->
+            <a href="/movies/<%=movies[i].id; %>/edit">Click to edit movie </a>
+            <!--Delete Form-->
+
+            <hr>
+            </li>
+            <% } %>
+
+    </ul>
+    <a href="/movies/new">Add a new Movie</a>
+</body>
+
+</html>
