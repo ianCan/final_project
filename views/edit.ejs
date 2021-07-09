@@ -8,16 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/test.css">
-    <title>Movie edit page</title>
+    <title>Playlist edit page</title>
 </head>
 
 <body>
-    <h1>Edit Your Movies Here</h1>
+    <h1>Edit Your Playlist Here</h1>
     <div class="edit-outline">
-        <form action="/movies/<%=movie.id%>?_method=PUT" method="POST">
-            Name: <input type="text" name="name" value="<%= movie.name%>" />
+        <form action="/playlist/<%=playlist.id%>?_method=PUT" method="POST">
+            Name: <input type="text" name="name" value="<%= playlist.name%>" />
             <br>
-            Genre: <select name="genre" value="<%= movie.genre%>" id="genre-select">
+            Genre: <select name="genre" value="<%= playlist.genre%>" id="genre-select">
                 <option value=""> </option>
                 <option value="Action">Action</option>
                 <option value="Animaton">Animaton</option>
@@ -31,7 +31,7 @@
                 <option value="Western">Western</option>
             </select>
             <br>
-            Streaming Service: <select type="text" name="streaming" value="<%= movie.streaming%>" id="stream-select">
+            Streaming Service: <select type="text" name="streaming" value="<%= playlist.streaming%>" id="stream-select">
                 <option value=""> </option>
                 <option value="Netflix">Netflix</option>
                 <option value="Amazon Prime">Amazon Prime</option>
@@ -41,14 +41,14 @@
                 <option value="Crunchyroll">Crunchyroll</option>
             </select>
             <br>
-            Score: <input type="range" id="score" value="<%= movie.score%>" name="score" min="0" max="10">
+            Score: <input type="range" id="score" value="<%= playlist.score%>" name="score" min="0" max="10">
             <br>
-            Watched: <input type="checkbox" name="hasSeen" <% if(movie.hasSeen===true){ %>
+            Watched: <input type="checkbox" name="hasSeen" <% if(playlist.hasSeen===true){ %>
             checked
             <% } %>
                 />
                 <br>
-                <input type="submit" value="Update Movie">
+                <input type="submit" value="Update playlist">
     </div>
     </form>
 </body>

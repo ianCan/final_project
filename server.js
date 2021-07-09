@@ -48,13 +48,13 @@ mongoose.connection.once('open', () => {
     console.log('connected to mongo');
 });
 
-const moviesController = require('./controllers/movies.js');
-APP.use(moviesController)
+const playlistController = require('./controllers/playlist.js');
+APP.use(playlistController)
 
 APP.get('/create-session', (req, res) => {
     console.log(req.session);
     req.session.anyProperty = 'Gone With the Wind';
-    res.redirect('/movies')
+    res.redirect('/playlist')
 });
 
 APP.get('/retrieve-session', (req, res) => {
@@ -63,14 +63,14 @@ APP.get('/retrieve-session', (req, res) => {
     } else {
         console.log('tis is NOT a Gone With the Wind')
     }
-    res.redirect('/movies')
+    res.redirect('/playlist')
 });
 
 APP.get('/update-session', (req, res) => {
     console.log(req.session);
     req.session.anyProperty = 'Gone With the Wind';
     console.log(req.session);
-    res.redirect('/movies')
+    res.redirect('/playlist')
 });
 
 APP.get('/delete-session', (req, res) => {
@@ -81,7 +81,7 @@ APP.get('/delete-session', (req, res) => {
             console.log('all is well')
         };
     });
-    res.redirect('/movies')
+    res.redirect('/playlist')
 });
 
 //___________________
@@ -89,7 +89,7 @@ APP.get('/delete-session', (req, res) => {
 //___________________
 //localhost:3000
 APP.get('/', (req, res) => {
-    res.redirect('/movies');
+    res.redirect('/playlist');
 });
 
 //___________________

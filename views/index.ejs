@@ -14,27 +14,27 @@
 <body>
     <h1>Your Queue</h1>
 
-    <ul class="movie">
-        <% for(let i=0; i < movies.length; i++){ %>
+    <ul class="playlist">
+        <% for(let i=0; i < playlist.length; i++){ %>
             <li>
-                <a class="title" href="/movies/<%=movies[i].id; %>">
-                    <%=movies[i].name; %>
+                <a class="title" href="/playlist/<%=playlist[i].id; %>">
+                    <%=playlist[i].name; %>
                 </a>
             </li>
             <li>
                 Catergory : <br>
                 <span class="info">
-                    <%=movies[i].genre; %>
+                    <%=playlist[i].genre; %>
                 </span>
             </li>
             <li>
                 Streaming Service : <br>
                 <span class="info">
-                    <%=movies[i].streaming; %>
+                    <%=playlist[i].streaming; %>
                 </span>
             </li>
             <li>
-                <% if(movies[i].hasSeen===true){ %>
+                <% if(playlist[i].hasSeen===true){ %>
                     You have seen this movie.
                     <% } else { %>
                         Needs to be watched.
@@ -42,17 +42,17 @@
             </li>
             <li>
                 User Score : <br> <span class="info">
-                    <%=movies[i].score; %>
+                    <%=playlist[i].score; %>
                 </span>/10
             </li>
             <li>
-                <form action="/movies/<%=movies[i].id; %>?_method=DELETE" method="POST">
+                <form action="/playlist/<%=playlist[i].id; %>?_method=DELETE" method="POST">
                     <input type="submit" class="btn btn-outline-danger" value="DELETE">
                 </form>
             </li>
             <br>
             <!--Update Form-->
-            <a href="/movies/<%=movies[i].id; %>/edit">Click to edit movie </a>
+            <a href="/playlist/<%=playlist[i].id; %>/edit">Click to edit movie </a>
             <!--Delete Form-->
 
             <hr>
@@ -60,7 +60,7 @@
             <% } %>
 
     </ul>
-    <a href="/movies/new">Add a new Movie</a>
+    <a href="/playlist/new">Add a new Movie</a>
 </body>
 
 </html>
