@@ -16,15 +16,11 @@
         <h1>
             <%=playlist.name; %>
         </h1>
-        <%=playlist.name; %> is a <%=playlist.genre; %> playlist.
-                <% if(playlist.hasSeen===true){ %>
-                    You have seen this playlist.
-                    <% } else { %>
-                        Needs to be watched.
-                        <% } %>
-                            <nav>
-                                <a href="/playlist">Back to your queue</a>
-                            </nav>
+        <%=playlist.name; %> is a <%=playlist.pic; %>
+                <%=playlist.tracks; %>
+                    <nav>
+                        <a href="/playlist">Back to your queue</a>
+                    </nav>
     </div>
 </body>
 
