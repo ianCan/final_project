@@ -6,6 +6,7 @@ const methodOverride = require('method-override');
 const mongoose = require('mongoose');
 const APP = express();
 const db = mongoose.connection;
+const SpotifyWebApi = require('spotify-web-api-node');
 
 //___________________
 //Port
