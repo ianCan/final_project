@@ -17,21 +17,9 @@
         <form action="/playlist/<%=playlist.id%>?_method=PUT" method="POST">
             Name: <input type="text" name="name" value="<%= playlist.name%>" />
             <br>
-            Genre: <select name="genre" value="<%= playlist.pic%>" id="genre-select">
-                <option value=""> </option>
-                <option value="Action">Action</option>
-                <option value="Animaton">Animaton</option>
-                <option value="Comedy">Comedy</option>
-                <option value="Drama">Drama</option>
-                <option value="Fantasy">Fantasy</option>
-                <option value="Horror">Horror</option>
-                <option value="Mystery">Mystery</option>
-                <option value="Romance">Romance</option>
-                <option value="Thriller">Thriller</option>
-                <option value="Western">Western</option>
-            </select>
+            Genre: <input type="text" name="pic" value="<%= playlist.pic%>" id="genre-select">
             <br>
-            Streaming Service: <select type="text" name="streaming" value="<%= playlist.tracks%>" id="stream-select">
+            Streaming Service: <select type="text" name="tracks" value="<%= playlist.tracks%>" id="stream-select">
                 <option value=""> </option>
                 <option value="Netflix">Netflix</option>
                 <option value="Amazon Prime">Amazon Prime</option>
