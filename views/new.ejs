@@ -17,10 +17,12 @@
         <form action="/playlist" method="POST">
             Name: <input type="text" name="name" />
             <br>
-            Playlist pic: <input type="text" name="pic" id="">
+            Genre: <input name="pic" id="genre-select" />
             <br>
-            Tracks(please seperate each song by " , "and use the format of "Song by Artist"): <textarea name="" id=""
-                cols="30" rows="10"></textarea>
+            Tracks (Please format "Song by Artist" and separate songs by " , "): <textarea type="text" name="tracks"
+                id="stream-select" rows="5" cols="33">
+                </textarea>
+            Personal Score: <input type="range" id="score" name="score" min="0" max="10">
             <br>
             <input type="submit" value="Create Movie">
         </form>
