@@ -9,6 +9,10 @@ li{
     display: inline-block;
     margin: auto 100px 30px 100px;
 }
+img{
+    display: block;
+    width: 100px;
+}
 .title{
     font-size: 75px;
     color: #c9ada7;
