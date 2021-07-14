@@ -1,5 +1,5 @@
 body {
-    background-color: #22223b ;
+    background-color: #8080bb ;
     color: #f2e9e4;
 }
 h1{
@@ -9,10 +9,18 @@ li{
     display: inline-block;
     margin: auto 100px 30px 100px;
 }
-img{
-    display: block;
-    width: 100px;
+.coverpic{
+    width: 200px;
+    height: auto;
+    padding: 15px;  
 }
+/* .carousel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+} */
 .title{
     font-size: 75px;
     color: #c9ada7;
